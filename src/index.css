@@ -31,9 +31,6 @@ body:before {
   font-size: 0;
   height: 100%;
 }
-#root {
-  margin-top: 61.8%;
-}
 
 h1 {
   display: inline-block;
