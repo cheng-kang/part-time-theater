@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 body {
   text-align: center;
@@ -30,6 +30,9 @@ body:before {
   vertical-align: middle;
   font-size: 0;
   height: 100%;
+}
+#root {
+  margin-top: 61.8%;
 }
 
 h1 {
