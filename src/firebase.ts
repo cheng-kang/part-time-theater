@@ -1,4 +1,3 @@
-
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
@@ -14,7 +13,7 @@ const firebaseConfig = {
   storageBucket: "part-time-theater.appspot.com",
   messagingSenderId: "52098331465",
   appId: "1:52098331465:web:4d63c3378b5f68203f2098",
-  measurementId: "G-XF42QC7WNH"
+  measurementId: "G-XF42QC7WNH",
 };
 
 // Initialize Firebase

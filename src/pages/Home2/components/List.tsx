@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { format } from "date-fns";
 import React from "react";
-import { Dvd, useDvdList } from "./hooks/useDvdList";
-import { useShowtimeList } from "./hooks/useShowtimeList";
+import { useDvdList, Dvd } from "../../../hooks/useDvdList";
+import { useShowtimeList } from "../../../hooks/useShowtimeList";
 import "./List.css";
 
 const List: React.FC = () => {
@@ -50,13 +50,21 @@ const List: React.FC = () => {
           ) : (
             showtimeList.upcoming.map((item) => {
               const dvd = dvdMap[item.dvd];
-              console.log(item)
+              console.log(item);
               if (!dvd)
                 return (
-                  <div className="list__items-container__item--empty" key={item.id}>-</div>
+                  <div
+                    className="list__items-container__item--empty"
+                    key={item.id}
+                  >
+                    -
+                  </div>
                 );
               return (
-                <div className="list__items-container__showtime-item" key={item.id}>
+                <div
+                  className="list__items-container__showtime-item"
+                  key={item.id}
+                >
                   <div>{dvd.title}</div>
                   <div>{format(item.datetime, "HH:mm MMM do")}</div>
                 </div>
@@ -65,9 +73,7 @@ const List: React.FC = () => {
           ))}
         {tab === "past" &&
           (showtimeList === undefined || showtimeList.past === undefined ? (
-            <div className="list__items-container__item--empty">
-              Loading...
-            </div>
+            <div className="list__items-container__item--empty">Loading...</div>
           ) : showtimeList.past.length === 0 ? (
             <div className="list__items-container__item--empty">
               Nothing yet.
@@ -77,10 +83,18 @@ const List: React.FC = () => {
               const dvd = dvdMap[item.dvd];
               if (!dvd)
                 return (
-                  <div className="list__items-container__item--empty" key={item.id}>-</div>
+                  <div
+                    className="list__items-container__item--empty"
+                    key={item.id}
+                  >
+                    -
+                  </div>
                 );
               return (
-                <div className="list__items-container__showtime-item" key={item.id}>
+                <div
+                  className="list__items-container__showtime-item"
+                  key={item.id}
+                >
                   <div>{dvd.title}</div>
                   <div>{format(item.datetime, "HH:mm MMM do")}</div>
                 </div>
